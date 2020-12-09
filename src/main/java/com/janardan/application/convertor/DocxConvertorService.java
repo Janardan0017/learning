@@ -41,7 +41,6 @@ public class DocxConvertorService {
             Result<String> result = converter.convertToHtml(multipartFile.getInputStream());
             String html = result.getValue(); // The generated HTML
             Set<String> warnings = result.getWarnings(); // Any warnings during conversion
-            System.out.println(warnings);
             return html;
         } catch (Exception e) {
             e.printStackTrace();
